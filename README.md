@@ -147,12 +147,16 @@ In the output, you'll find the secret content, commit ID, and other relevant inf
 
 3. **Creating a baseline**
 When scanning large repositories or repositories with a long history, it can be convenient to use a baseline. When using a baseline, gitleaks will ignore any old findings that are present in the baseline. A baseline can be any gitleaks report. To create a gitleaks report, run gitleaks with the `--report-path` parameter.
+
 `gitleaks detect --report-path gitleaks-report.json # This will save the report in a file called gitleaks-report.json`
+
 Once as baseline is created it can be applied when running the detect command again:
+
 `gitleaks detect --baseline-path gitleaks-report.json --report-path findings.json`
+
 After running the detect command with the --baseline-path parameter, report output (findings.json) will only contain new issues.
 
-4. **Verify Findings**
+5. **Verify Findings**
 You can verify a finding found by gitleaks using a `git log` command. Example output:
 ```
 {
@@ -177,8 +181,11 @@ You can verify a finding found by gitleaks using a `git log` command. Example ou
  }
 ```
 We can use the following format to verify the leak:
+
 `git log -L {StartLine,EndLine}:{File} {Commit}`
+
 So in this example it would look like:
+
 `git log -L 10,11:src/main/resources/sql/import-h2.sql 0553a75ebeb005e15f47f674400b0177d00af278`
 
 
