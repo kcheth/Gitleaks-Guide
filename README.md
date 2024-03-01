@@ -148,7 +148,7 @@ In the output, you'll find the secret content, commit ID, and other relevant inf
 3. **Creating a baseline**
 When scanning large repositories or repositories with a long history, it can be convenient to use a baseline. When using a baseline, gitleaks will ignore any old findings that are present in the baseline. A baseline can be any gitleaks report. To create a gitleaks report, run gitleaks with the `--report-path` parameter.
 
-`gitleaks detect --report-path gitleaks-report.json # This will save the report in a file called gitleaks-report.json`
+`gitleaks detect --report-path gitleaks-report.json` # This will save the report in a file called gitleaks-report.json
 
 Once as baseline is created it can be applied when running the detect command again:
 
