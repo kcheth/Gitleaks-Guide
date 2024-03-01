@@ -1,4 +1,4 @@
-# Gitleaks
+<font color="red"># Gitleaks</font>
 As DevOps engineers, we recognize the significance of maintaining the security and integrity of our code repositories. A crucial aspect of securing a codebase involves ensuring that sensitive information, including passwords, API keys, tokens, private keys, or any suspicious file names, is not inadvertently committed.
 
 ## What is Gitleaks?
