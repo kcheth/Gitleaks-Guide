@@ -158,6 +158,7 @@ Once as baseline is created it can be applied when running the detect command ag
 After running the detect command with the `--baseline-path` parameter, report output (findings.json) will only contain new issues.
 
 5. **Verify Findings**
+   
 You can verify a finding found by gitleaks using a `git log` command. Example output:
 ```
 {
@@ -188,6 +189,30 @@ We can use the following format to verify the leak:
 So in this example it would look like:
 
 `git log -L 10,11:src/main/resources/sql/import-h2.sql 0553a75ebeb005e15f47f674400b0177d00af278`
+
+Which gives us:
+```
+commit 0553a75ebeb005e15f47f674400b0177d00af278
+Author: Jaiswal <adijaiswal@deloitte.com>
+Date:   Sun May 7 00:21:52 2023 +0530
+
+    Added source code
+
+diff --git a/src/main/resources/sql/import-h2.sql b/src/main/resources/sql/import-h2.sql
+--- /dev/null
++++ b/src/main/resources/sql/import-h2.sql
+@@ -0,0 +10,2 @@
++-- password in plaintext: "password"
++INSERT INTO USER (user_id, password, email, username, name, last_name, active)
+```
+Run `gitleaks --help` command to check out all the other options
+
+### Conclusion:
+Gitleaks is a robust solution for maintaining the security of your code repository, promptly notifying you of any inadvertent exposure of sensitive data. Through its installation and setup, GitLeaks empowers you to safeguard your codebase, offering confidence in its security and providing visibility into potential data vulnerabilities.
+
+You can also refer to the Gitleaks documentation for more information on its usage and configuration options: [Gitleaks Documentation](https://github.com/gitleaks/gitleaks)
+
+
 
 
 
