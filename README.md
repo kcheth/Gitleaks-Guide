@@ -167,7 +167,7 @@ Once as baseline is created it can be applied when running the detect command ag
 
 After running the detect command with the `--baseline-path` parameter, report output (findings.json) will only contain new issues.
 
-5. **Verify Findings**
+4. **Verify Findings**
    
 You can verify a finding found by gitleaks using a `git log` command. Example output:
 ```
