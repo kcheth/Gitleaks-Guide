@@ -12,20 +12,30 @@ Gitleaks functions by inspecting your code repository for files that conform to 
 1. Download Gitleaks:
    1. Obtain the Gitleaks binary for Linux from its GitHub [releases page](https://github.com/gitleaks/gitleaks/releases)
    2. Ensure to select the version that matches your architecture (e.g., Linux x64).
-`wget <https://github.com/gitleaks/gitleaks/releases/download/v8.18.2/gitleaks_8.18.2_linux_x64.tar.gz>`
-   3. At the time of documenting this installation, the Gitleaks version was V8.18.2.
+
+      `wget <https://github.com/gitleaks/gitleaks/releases/download/v8.18.2/gitleaks_8.18.2_linux_x64.tar.gz>`
+      
+    At the time of documenting this installation, the Gitleaks version was V8.18.2.
 2. Extract the Tarball:
    1. After completing the download, extract the contents of the tarball.
-`tar xvf gitleaks_8.18.2_linux_x64.tar.gz`
-3. Grant Executable Permission:
+      
+   `tar xvf gitleaks_8.18.2_linux_x64.tar.gz`
+   
+4. Grant Executable Permission:
    1. Provide executable permission to the extracted file.
-`chmod +x gitleaks`
-4. Move the Binary:
+      
+   `chmod +x gitleaks`
+   
+6. Move the Binary:
    1. Move the extracted Gitleaks binary to a directory in your system's PATH for global accessibility.
-`sudo mv gitleaks /usr/local/bin/`
-5. Verify Installation:
+      
+   `sudo mv gitleaks /usr/local/bin/`
+   
+8. Verify Installation:
    1. Gitleaks doesn't support the --version flag for displaying the version. You can confirm a successful Gitleaks installation by running:
-`gitleaks version`
+      
+   `gitleaks version`
+   
 You should see the version number displayed, confirming that Gitleaks is installed.
 
 ![image](https://github.com/kcheth/Gitleaks-Guide/assets/106922418/fa250eba-6835-4650-98ea-31f21cd81536)
